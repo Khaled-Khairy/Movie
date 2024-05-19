@@ -96,14 +96,16 @@ class DetailsInfo extends StatelessWidget {
                       color: Color(0xff8D939C)),
                   trimMode: TrimMode.Line,
                   trimLines: 2,
-                  lessStyle: TextStyle(
+                  lessStyle: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey[600]),
-                  moreStyle: TextStyle(
+                      color: Color(0xff3f3f3f)
+                  ),
+                  moreStyle: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey[600]),
+                      color: Color(0xff3f3f3f)),
+                  trimExpandedText: ' Show less',
                 ),
               ],
             ),
