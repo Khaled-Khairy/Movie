@@ -1,6 +1,6 @@
-# movie3
+# Movie
 
-A new Flutter project.
+A Movie overview app based on TMDP Api.
 
 ## Getting Started
 
