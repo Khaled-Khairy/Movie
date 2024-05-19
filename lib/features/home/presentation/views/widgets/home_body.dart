@@ -24,22 +24,22 @@ class HomeBody extends StatelessWidget {
             SizedBox(
               height: 10.h(context),
             ),
-            const MovieCategory(category: "Popular", categoryName: "Popular"),
+            const MovieCategory(category: "popular", categoryName: "Popular"),
             SizedBox(
               height: 10.h(context),
             ),
             const MovieCategory(
-                category: "NowPlaying", categoryName: "Now Playing"),
+                category: "now_playing", categoryName: "Now Playing"),
             SizedBox(
               height: 10.h(context),
             ),
             const MovieCategory(
-                category: "TopRated", categoryName: "Top Rated"),
+                category: "top_rated", categoryName: "Top Rated"),
             SizedBox(
               height: 10.h(context),
             ),
             const MovieCategory(
-                category: "Upcoming", categoryName: "Up Coming"),
+                category: "upcoming", categoryName: "Up Coming"),
             SizedBox(
               height: 10.h(context),
             )

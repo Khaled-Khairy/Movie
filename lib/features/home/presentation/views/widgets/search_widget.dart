@@ -21,7 +21,7 @@ class SearchWidget extends StatelessWidget {
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
                   vertical: 16.h(context), horizontal: 8.w(context)),
-              hintText: "Search..",
+              hintText: "Search...",
               hintStyle:
               const TextStyle(color: Color(0xff8D939C), fontSize: 18),
               enabledBorder: const OutlineInputBorder(

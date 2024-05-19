@@ -9,28 +9,11 @@ class SeeAllScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String category = ModalRoute
-        .of(context)!
-        .settings
-        .arguments as String;
+    final Map<String,dynamic> args = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
     return BlocProvider(
-      create: (context) => getMovieCubitForCategory(category),
-      child: SeeAllBody(category: category,),
+      create: (context) => SeaAllMoviesCubit()..fetchMovies(args["category"]),
+      child: SeeAllBody(category: args["category"], categoryName:args["categoryName"] ),
     );
-  }
-}
-SeaAllMoviesCubit getMovieCubitForCategory(String category) {
-  switch (category) {
-    case "Popular":
-      return SeaAllMoviesCubit()..fetchPopularMovies();
-    case "TopRated":
-      return SeaAllMoviesCubit()..fetchTopRatedMovies();
-    case "Upcoming":
-      return SeaAllMoviesCubit()..fetchUpComingMovies();
-    case "NowPlaying":
-      return SeaAllMoviesCubit()..fetchNowPlayingMovies();
-    default:
-      return SeaAllMoviesCubit()..fetchPopularMovies();
   }
 }
 

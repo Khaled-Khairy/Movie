@@ -17,14 +17,14 @@ class MovieCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) {
-        switch (category) {
+        switch (categoryName) {
           case "Popular":
             return MovieCubit()..fetchPopularMovies();
-          case "TopRated":
+          case "Top Rated":
             return MovieCubit()..fetchTopRatedMovies();
-          case "Upcoming":
+          case "Up Coming":
             return MovieCubit()..fetchUpComingMovies();
-          case "NowPlaying":
+          case "Now Playing":
             return MovieCubit()..fetchNowPlayingMovies();
           default:
             return MovieCubit()..fetchPopularMovies();
@@ -43,7 +43,7 @@ class MovieCategory extends StatelessWidget {
                     children: [
                       Text(
                         categoryName,
-                        style:  TextStyle(
+                        style: TextStyle(
                             color: kTextColor,
                             fontSize: 28,
                             fontWeight: FontWeight.bold),
@@ -52,8 +52,10 @@ class MovieCategory extends StatelessWidget {
                         splashFactory: NoSplash.splashFactory,
                         highlightColor: Colors.transparent,
                         onTap: () {
-                          Navigator.pushNamed(context, "SeeAll",
-                              arguments: category);
+                          Navigator.pushNamed(context, "SeeAll", arguments: {
+                            "category": category,
+                            "categoryName": categoryName,
+                          });
                         },
                         child: const Text(
                           "See All",
